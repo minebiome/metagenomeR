@@ -105,9 +105,9 @@ phenotypeTest <- function(path,continuous=NULL,discrete=NULL){
 #' @examples
 #'
 #' Group age
-#  60    A-pp  29
-#  61    A-pp  36
-#  64    A-pp  22
+#' A-pp  29
+#' A-pp  36
+#' A-pp  22
 #' path = system.file("extdata","metadata.txt", package = "metagenomeR")
 #' comparlist=list(c("A-pp","S-pp"),c("A-sp","S-sp"),c("A-pp","A-sp"),c("S-pp","S-sp"))
 #' data <- read.table(path, header=T, row.names=1, sep="\t", comment.char="",check.names=F, stringsAsFactors = F)
@@ -245,6 +245,8 @@ boxplotContinuous <- function (.data,
   p
 
 }
+
+
 
 
 
