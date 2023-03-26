@@ -5,7 +5,11 @@
 \alias{readMetaphlan}
 \title{readMetaphlan}
 \usage{
-readMetaphlan(path, checkColnames = T)
+readMetaphlan(
+  path,
+  checkColnames = T,
+  cl_list = c("species", "genus", "class", "family", "order", "phylum")
+)
 }
 \arguments{
 \item{path}{metaphlan输出的文件夹}

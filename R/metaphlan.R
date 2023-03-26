@@ -19,7 +19,7 @@
 #' mres <- readMetaphlan(path)
 #'
 #' @export
-readMetaphlan <- function(path,checkColnames= T){
+readMetaphlan <- function(path,checkColnames= T,cl_list = c("species", "genus", "class", "family", "order", "phylum")){
   # 界（Kingdom）、门（Phylum）、纲（Class）、目（Order）、科（Family）、属（Genus）、种（Species）
   files <- list.files(path,pattern = "*class.txt|*family.txt|*genus.txt|*order.txt|*phylum.txt|*species.txt", full.names = T)
   mres <- new("metaphlanResult")
@@ -36,6 +36,12 @@ readMetaphlan <- function(path,checkColnames= T){
     slot(mres, var) <<- otutab
     var
     # path
+  })
+  cnames <- lapply(cl_list, function(name){
+    if(name=="class"){
+      name <- "clazz"
+    }
+    colnames(slot(mres,name))
   })
   if(checkColnames &&  !all(unlist(Map(identical,list( cnames[[1]]),cnames)))){
     stop("样本名称不同，或者样本名称顺序不同")
