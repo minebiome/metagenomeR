@@ -114,7 +114,7 @@ phenotypeTest <- function(path,continuous=NULL,discrete=NULL){
 #' boxplotContinuous(data,index="age",color="aaas", group="Group",signif=T,comparlist=comparlist)
 #' boxplotContinuous(data,index="age", group="Group")
 #'
-#' @importFrom ggplot2 ggplot
+#' @importFrom ggplot2 ggplot aes geom_boxplot labs theme geom_jitter
 #' @importFrom dplyr rename
 #' @importFrom ggpubr geom_signif
 #' @importFrom ggsci scale_color_aaas scale_fill_aaas scale_color_d3 scale_fill_d3
