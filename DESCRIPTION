@@ -5,6 +5,11 @@ Version: 0.1.0
 Author: YuDanZhang,WangYang
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
+Imports:
+    ggplot2,
+    dplyr,
+    ggpubr,
+    ggsci
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
